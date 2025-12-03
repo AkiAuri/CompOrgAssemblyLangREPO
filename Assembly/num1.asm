@@ -1,0 +1,20 @@
+.MODEL SMALL
+.STACK 100H 
+
+.DATA
+
+.CODE 
+	MOV AX. @DATA
+	MOV DS, AX
+	MOV CX, 05H
+	MOV AH, 02H 
+	MOV DL, 'A'
+	
+	X: INT 21H 
+	LOOP X
+	
+	
+	MOV AH, 4CH 
+	INT 21H 
+
+END 
